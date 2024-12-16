@@ -1,10 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import Header from '../../components/Home/Header';
 
-export default function home() {
+export default function Home() {
   return (
-    <View>
-      <Text style={{fontSize:40, fontFamily:'outfit'}}>home</Text>
-    </View>
-  )
+    <SafeAreaView style={styles.container}>
+      <Header />
+    </SafeAreaView>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // Makes the container fill the screen
+  },
+});
