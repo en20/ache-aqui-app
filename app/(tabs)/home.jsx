@@ -1,12 +1,16 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import {View, StyleSheet } from 'react-native';
 import Header from '../../components/Home/Header';
+import Slider from '../../components/Home/Slider';
+import Category from '../../components/Home/Category';
 
 export default function Home() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Header />
-    </SafeAreaView>
+      <Slider/>
+      <Category/>
+    </View>
   );
 }
 
