@@ -1,10 +1,10 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import { Colors } from '../../constants/Colors';
 
-export default function CategoryItem({ category }) {
+export default function CategoryItem({ category, onCategoryPress }) {
   return (
-    <View
+    <TouchableOpacity onPress={()=>onCategoryPress(category)}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -38,6 +38,6 @@ export default function CategoryItem({ category }) {
       >
         {category.name}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }

@@ -4,9 +4,11 @@ import { db } from '../../config/FirebaseConfig';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { Colors } from '../../constants/Colors';
 import CategoryItem from './CategoryItem';
+import { useRouter } from 'expo-router';
 
-export default function Category() {
+export default function Category({explore=false, onCategorySelect}) {
     const [categoryList, setCategoryList] = useState([]);
+    const router=useRouter();
         useEffect(() =>{
             GetCategoryList()
         },[])
@@ -21,9 +23,19 @@ export default function Category() {
         });
         setCategoryList(categories);
       };
+    const onCategoryPressHandler=(item) => {
+        if(!explore)
+        {
+            router.push('/businesslist/'+item.name)
+        }
+        else
+        {
+            onCategorySelect(item.name)
+        }
+    }
   return (
     <View>
-        <View style={{
+        {!explore&& <View style={{
             display:'flex',
             flexDirection:'row',
             alignItems: 'center',
@@ -37,7 +49,7 @@ export default function Category() {
             fontFamily: 'outfit-bold'
         }}>Category</Text>
         <Text style={{color:Colors.PRIMARY, fontFamily: 'outfit-medium' }}>View All</Text>
-        </View>
+        </View>}
         <FlatList
         data={categoryList}
         horizontal={true}
@@ -46,7 +58,10 @@ export default function Category() {
         }}
         showsHorizontalScrollIndicator={false}
         renderItem={({item,index})=>(
-            <CategoryItem category={item} key={index}/>
+            <CategoryItem 
+            category={item}
+            key={index} 
+            onCategoryPress={(category)=>onCategoryPressHandler(item)}/>
         )}/>
     </View>
   )
