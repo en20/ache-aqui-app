@@ -1,34 +1,54 @@
-import { View, Text, FlatList, Image } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity, Share } from 'react-native'
 import React from 'react'
 import {Colors} from './../../constants/Colors'
+import { useRouter } from 'expo-router'
+import { useAuth } from '@clerk/clerk-expo'
 
 export default function MenuList() {
+    const {signOut}=useAuth()
     const menuList=[
         {
             id:1,
             name:'Add Business',
             icon: require('./../../assets/images/add.png'),
-            path:''
+            path:'/business/add-business'
         },
         {
             id:2,
             name:'My Business',
             icon: require('./../../assets/images/business-and-trade.png'),
-            path:''
+            path:'/business/my-business'
         },
         {
             id:3,
             name:'Share App',
             icon: require('./../../assets/images/share_1.png'),
-            path:''
+            path:'share'
         },
         {
             id:4,
             name:'Logout',
             icon: require('./../../assets/images/logout.png'),
-            path:''
+            path:'logout'
         }
     ]
+    const router=useRouter()
+
+    const onMenuClick=(item) => {
+        if(item.path=='logout'){
+            signOut();
+            return ;
+        }
+        if(item.path=='share'){
+            Share.share(
+                {
+                    message: 'Download Ache aqui app'
+                })
+            return ;
+        }
+        router.push(item.path)
+
+    }
   return (
     <View 
     style={{
@@ -38,7 +58,9 @@ export default function MenuList() {
       numColumns={2} 
       data={menuList}
       renderItem={({item,index}) => (
-        <View style={{
+        <TouchableOpacity 
+        onPress={() => onMenuClick(item) }
+        style={{
             display: 'flex',
             flexDirection: 'row',
             alignItems:'center',
@@ -60,7 +82,7 @@ export default function MenuList() {
                 fontSize:16,
                 flex:1,
             }}>{item.name}</Text>
-        </View>
+        </TouchableOpacity>
       )}/>
       <Text style={{
         fontFamily: 'outfit',

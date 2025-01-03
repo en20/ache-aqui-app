@@ -21,7 +21,6 @@ export default function BusinessList() {
 
             const business = [];
             querySnapShot.forEach((doc) => {
-                console.log("Documento encontrado:", doc.data());
                 business.push({id:doc.id,...doc.data()});
             });
 

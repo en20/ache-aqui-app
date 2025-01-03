@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../config/FirebaseConfig';
-
-import BusinessListCard from '../../components/BusinessList/BusinessListCard';
+import BusinessListCard from '../../components/BusinessList/BusinessListCard1';
 import { Colors } from '../../constants/Colors';
 
 export default function BusinessListByCategory() {
