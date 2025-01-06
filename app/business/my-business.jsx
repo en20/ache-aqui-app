@@ -15,9 +15,6 @@ export default function MyBusiness() {
     navigation.setOptions({
         headerShown:true,
         headerTitle: 'My Business',
-        headerStyle: {
-            backgroundColor:Colors.PRIMARY
-        }
     })
     user && GetUserBusiness();
   }, [user]);

@@ -41,20 +41,17 @@ export default function LoginScreen() {
       />
       <View style={styles.subContainer}>
         <Text style={styles.titleText}>
-          Your Ultimate
-          <Text style={styles.highlightText}>
-            {" "}
-            Community Business Directory{" "}
-          </Text>
-          App
+          Ache aqui
+          <Text style={styles.highlightText}> App </Text>
         </Text>
         <Text style={styles.descriptionText}>
-          Find your favorite business near you and post your own business too!
+          Ache pequenos negócios com preços acessíveis perto de você, e cadastre
+          o seu negócio também!
         </Text>
       </View>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText} onPress={onPress}>
-          Let's Get Started
+          Login / Cadastre-se
         </Text>
       </TouchableOpacity>
     </View>

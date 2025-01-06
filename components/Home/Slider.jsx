@@ -30,7 +30,7 @@ export default function Slider() {
             padding: 20,
             paddingTop:20,
             marginBottom:5
-        }}>#Special for you</Text>
+        }}>Especial para você!</Text>
          <FlatList 
         data={sliderList}
         horizontal={true}
@@ -42,7 +42,8 @@ export default function Slider() {
                 width:300,
                 height:150,
                 borderRadius:15,
-                marginRight:15
+                marginRight:15,
+                objectFit:'fill'
             }}
             />
         )}

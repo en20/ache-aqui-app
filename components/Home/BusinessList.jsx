@@ -43,8 +43,8 @@ export default function BusinessList() {
                 <Text style={{
                     fontSize: 20,
                     fontFamily: 'outfit-bold'
-                }}>Popular Business</Text>
-                <Text style={{ color: Colors.PRIMARY, fontFamily: 'outfit-medium' }}>View All</Text>
+                }}>Negócios Populares</Text>
+                <Text style={{ color: Colors.PRIMARY, fontFamily: 'outfit-medium' }}>Ver todos</Text>
             </View>
             <FlatList
                 data={businessList}

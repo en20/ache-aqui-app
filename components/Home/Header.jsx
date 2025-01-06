@@ -33,7 +33,7 @@ export default function Header() {
                 <Text style={{
                     fontSize:19,
                     color:'#fff'
-                }}>Welcome,</Text>
+                }}>Bem vindo,</Text>
                 <Text style={{
                     fontSize:19,
                      color:'#fff',
@@ -53,8 +53,8 @@ export default function Header() {
             borderRadius: 8,
         }}>
             <Feather name="search" size={24} color={Colors.PRIMARY} />
-            <TextInput placeholder='Search...' style={{
-                fontFamily:'outfit-bold',
+            <TextInput placeholder='Pesquisar...'  placeholderTextColor="#000" style={{
+                fontFamily:'outfit',
                 fontSize:16,
             }} />
         </View>

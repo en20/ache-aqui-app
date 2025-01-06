@@ -48,8 +48,8 @@ export default function explore() {
             
         }}>
             <Feather name="search" size={24} color={Colors.PRIMARY} />
-            <TextInput placeholder='Search...' style={{
-                fontFamily:'outfit-bold',
+            <TextInput placeholder='Pesquisar...' placeholderTextColor="#000" style={{
+                fontFamily:'outfit',
                 fontSize:16,
             }} />
         </View>

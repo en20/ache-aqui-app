@@ -6,12 +6,13 @@ import MenuList from '../../components/Profile/MenuList'
 export default function profile() {
   return (
     <View style={{
-      padding:20
+      padding:20,
+      paddingTop:50,
     }}>
       <Text style={{
         fontFamily: 'outfit-bold',
-        fontSize:35
-      }}>profile</Text>
+        fontSize:25
+      }}>Profile</Text>
       <UserIntro/>
       <MenuList/>
     </View>

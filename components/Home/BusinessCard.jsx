@@ -48,7 +48,7 @@ export default function BusinessCard({ business }) {
                         color: Colors.PRIMARY,
                         fontFamily: 'outfit-medium',
                         textDecorationLine: 'underline',
-                    }}>Visit Website</Text>
+                    }}>Visitar site</Text>
                 </View>
             </TouchableOpacity>
             <View style={{

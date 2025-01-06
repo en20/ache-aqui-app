@@ -43,7 +43,7 @@ export default function BusinessListCard({business}) {
                         color: Colors.PRIMARY,
                         fontFamily: 'outfit-medium',
                         textDecorationLine: 'underline',
-                    }}>Visit Website</Text>
+                    }}>Visitar Site</Text>
                 </View>
             </TouchableOpacity>
             <View style={{

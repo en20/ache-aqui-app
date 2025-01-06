@@ -47,8 +47,8 @@ export default function Category({explore=false, onCategorySelect}) {
         <Text style={{
             fontSize:20,
             fontFamily: 'outfit-bold'
-        }}>Category</Text>
-        <Text style={{color:Colors.PRIMARY, fontFamily: 'outfit-medium' }}>View All</Text>
+        }}>Categorias</Text>
+        <Text style={{color:Colors.PRIMARY, fontFamily: 'outfit-medium' }}>Ver todos</Text>
         </View>}
         <FlatList
         data={categoryList}
